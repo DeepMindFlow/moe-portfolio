@@ -6,7 +6,7 @@ export const config = {
   available: true,
   year: '2020',
   github: 'https://github.com/DeepMindFlow?tab=repositories',
-  linkedin: 'https://linkedin.com/in/YOURUSERNAME',
+  linkedin: 'https://www.linkedin.com/in/mwilli7/',
   // resume: 'https://your-resume-link.com',
   avatar: '/avatar.png',
   meta: {
