@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black font-body text-cream overflow-x-hidden;
+    cursor: none;
+  }
+
+  ::selection {
+    background: #1847d1;
+    color: #f4f2ee;
+  }
+}
+
+@layer utilities {
+  /* Opacity variants for cream/white */
+  .text-cream-55 {
+    color: rgba(244, 242, 238, 0.55);
+  }
+  .text-cream-30 {
+    color: rgba(244, 242, 238, 0.3);
+  }
+  .bg-cream-8 {
+    background: rgba(244, 242, 238, 0.08);
+  }
+  .bg-cream-12 {
+    background: rgba(244, 242, 238, 0.12);
+  }
+  .border-cream-10 {
+    border-color: rgba(244, 242, 238, 0.1);
+  }
+  .border-cream-25 {
+    border-color: rgba(244, 242, 238, 0.25);
+  }
+
+  /* Ghost outline text */
+  .text-stroke-blue {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(24, 71, 209, 0.1);
+  }
+
+  /* Hero entrance animations */
+  .animate-fade-up-1 {
+    animation: fade-up 0.7s ease 0.3s both;
+  }
+  .animate-fade-up-2 {
+    animation: fade-up 0.9s ease 0.5s both;
+  }
+  .animate-fade-up-3 {
+    animation: fade-up 0.8s ease 0.8s both;
+  }
+  .animate-fade-in-delayed {
+    animation: fade-in 1s ease 1s both;
+  }
+}
