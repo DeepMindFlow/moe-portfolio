@@ -39,7 +39,7 @@ export function Services() {
   }, [])
 
   return (
-    <section id="services" className="border-b border-cream-10 px-12 py-32">
+    <section id="services" className="border-cream-10 border-b px-6 py-20 md:px-12 md:py-32">
       <div className="mb-20 flex items-end justify-between">
         <div>
           <div ref={labelRef as React.RefObject<HTMLDivElement>}>
@@ -53,36 +53,37 @@ export function Services() {
           </h2>
         </div>
         <div ref={subRef as React.RefObject<HTMLDivElement>}>
-          <p className="max-w-[240px] text-right text-sm leading-relaxed text-cream-55">
+          <p className="text-cream-55 max-w-[240px] text-right text-sm leading-relaxed">
             From raw data to deployed models — end to end.
           </p>
         </div>
       </div>
 
-      <div ref={listRef} className="border-t border-cream-10">
+      <div ref={listRef} className="border-cream-10 border-t">
         {services.map((service) => (
           <motion.a
             key={service.num}
             href={service.href}
             data-hover
-            className="service-row group grid items-center gap-10 border-b border-cream-10 py-8"
-            style={{ gridTemplateColumns: '80px 1fr 220px 60px' }}
+            //className="service-row border-cream-10 group grid items-center gap-10 border-b py-8"
+            style={{ gridTemplateColumns: '40px 1fr 40px' }}
+            className="service-row border-cream-10 group grid items-center gap-4 border-b py-6 md:gap-10 md:py-8"
             whileHover={{ paddingLeft: '16px' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
-            <span className="text-[12px] tracking-wider text-cream-55 transition-colors duration-300 group-hover:text-blue-bright">
+            <span className="text-cream-55 text-[12px] tracking-wider transition-colors duration-300 group-hover:text-blue-bright">
               {service.num}
             </span>
             <span className="font-display text-[clamp(26px,3vw,42px)] font-normal leading-none tracking-tight">
               {service.name}
             </span>
-            <div className="flex flex-wrap gap-2">
+            <div className="hidden flex-wrap gap-2 md:flex">
               {service.tags.map((tag) => (
                 <Tag key={tag} label={tag} />
               ))}
             </div>
             <motion.span
-              className="text-right text-xl text-cream-55"
+              className="text-cream-55 text-right text-xl"
               whileHover={{ rotate: 45, color: '#f4f2ee' }}
               transition={{ type: 'spring', stiffness: 350, damping: 22 }}
             >

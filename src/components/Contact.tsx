@@ -51,7 +51,10 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="grid grid-cols-2 items-center gap-20 px-12 py-36">
+    <section
+      id="contact"
+      className="grid grid-cols-1 gap-12 px-6 py-20 md:grid-cols-2 md:gap-20 md:px-12 md:py-36"
+    >
       {/* Left */}
       <div>
         <div ref={labelRef as React.RefObject<HTMLDivElement>} className="mb-8">

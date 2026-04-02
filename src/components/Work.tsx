@@ -140,7 +140,7 @@ export function Work() {
   return (
     <section ref={sectionRef} id="work" className="overflow-hidden bg-black">
       {/* Sticky header */}
-      <div className="px-12 pt-32 pb-16">
+      <div className="px-6 pb-10 pt-20 md:px-12 md:pb-16 md:pt-32">
         <div className="flex items-end justify-between">
           <div>
             <div ref={labelRef as React.RefObject<HTMLDivElement>}>
@@ -173,7 +173,7 @@ export function Work() {
       </div>
 
       {/* Horizontal scroll track */}
-      <div className="overflow-visible pl-12">
+      <div className="overflow-x-auto pl-6 md:overflow-visible md:pl-12">
         <div ref={trackRef} className="flex gap-0.5 will-change-transform">
           {projects.map((project, i) => (
             <div key={project.id} className="project-card-wrap">

@@ -23,7 +23,7 @@ export function Navbar() {
         MOE ✦
       </motion.a>
 
-      <ul className="flex items-center gap-10">
+      <ul className="hidden items-center gap-10 md:flex">
         {links.map(({ label, href }, i) => (
           <motion.li
             key={href}

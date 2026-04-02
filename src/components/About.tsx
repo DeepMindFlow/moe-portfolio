@@ -16,7 +16,10 @@ export function About() {
   const avatarRef = useGsapReveal(undefined, { y: 20, duration: 0.7 })
 
   return (
-    <section id="about" className="border-cream-10 grid grid-cols-2 gap-20 border-b px-12 py-32">
+    <section
+      id="about"
+      className="border-cream-10 grid grid-cols-1 gap-10 border-b px-6 py-20 md:grid-cols-2 md:gap-20 md:px-12 md:py-32"
+    >
       {/* Left */}
       <div>
         <div ref={labelRef as React.RefObject<HTMLDivElement>}>
@@ -50,7 +53,7 @@ export function About() {
       </div>
 
       {/* Right */}
-      <div ref={rightRef as React.RefObject<HTMLDivElement>} className="pt-20">
+      <div ref={rightRef as React.RefObject<HTMLDivElement>} className="pt-0 md:pt-20">
         <p className="text-cream-55 mb-10 text-[17px] leading-[1.8]">
           I'm a Machine Learning Engineer with a deep focus on NLP and generative AI. I build
           systems from first principles — understanding the math before touching a framework.
@@ -64,7 +67,7 @@ export function About() {
           Education: Master of Science in Computer Science, Specialization in Machine Learning
         </p>
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-3 md:gap-6">
           {stats.map(({ num, label }) => (
             <div key={label} className="stat border-cream-10 border-t pt-5">
               <span className="block font-display text-[38px] font-normal leading-none tracking-tight">

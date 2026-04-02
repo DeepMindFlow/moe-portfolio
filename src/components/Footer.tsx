@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer
       ref={ref as React.RefObject<HTMLElement>}
-      className="flex items-center justify-between border-t border-cream-10 px-12 py-8"
+      className="border-cream-10 flex flex-col items-center gap-4 border-t px-6 py-8 text-center md:flex-row md:justify-between md:px-12"
     >
       <motion.a
         href="#"
@@ -23,13 +23,13 @@ export function Footer() {
       >
         MOE ✦
       </motion.a>
-      <span className="text-[12px] text-cream-55">© 2025 — All rights reserved</span>
+      <span className="text-cream-55 text-[12px]">© 2025 — All rights reserved</span>
       <ul className="flex gap-7">
         {links.map(({ label, href }) => (
           <li key={href}>
             <motion.a
               href={href}
-              className="text-[12px] tracking-wide text-cream-55"
+              className="text-cream-55 text-[12px] tracking-wide"
               whileHover={{ color: '#f4f2ee', y: -1 }}
               transition={{ type: 'spring', stiffness: 400, damping: 25 }}
             >

@@ -21,12 +21,12 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-12 pb-16">
+    <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-10 md:px-12 md:pb-16">
       {/* Ghost bg text — GSAP parallax */}
       <span
         ref={ghostRef}
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-display text-[clamp(180px,28vw,420px)] font-bold leading-none tracking-tighter text-stroke-blue"
+        className="text-stroke-blue pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-display text-[clamp(180px,28vw,420px)] font-bold leading-none tracking-tighter"
       >
         ML
       </span>
@@ -36,9 +36,9 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute right-12 top-28 max-w-[260px] text-right"
+        className="absolute right-6 top-28 hidden max-w-[260px] text-right md:block"
       >
-        <p className="text-[13px] leading-relaxed text-cream-55">
+        <p className="text-cream-55 text-[13px] leading-relaxed">
           Machine Learning Engineer & NLP researcher crafting systems that think — not just compute.
         </p>
       </motion.div>
@@ -55,10 +55,15 @@ export function Hero() {
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: 'easeOut' } },
           }}
-          className="mb-10 inline-flex w-fit items-center gap-2 rounded-full border border-cream-10 bg-cream-8 px-3.5 py-1.5"
+          className="border-cream-10 bg-cream-8 mb-10 inline-flex w-fit items-center gap-2 rounded-full border px-3.5 py-1.5"
         >
-          <span ref={badgeDotRef} className="inline-block h-1.5 w-1.5 rounded-full bg-blue-bright" />
-          <span className="text-[12px] tracking-wider text-cream-55">Available for projects — 2025</span>
+          <span
+            ref={badgeDotRef}
+            className="inline-block h-1.5 w-1.5 rounded-full bg-blue-bright"
+          />
+          <span className="text-cream-55 text-[12px] tracking-wider">
+            Available for projects — 2026
+          </span>
         </motion.div>
 
         {/* Headline */}
@@ -82,16 +87,16 @@ export function Hero() {
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: 'easeOut' } },
           }}
-          className="mt-12 flex items-end justify-between"
+          className="mt-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
         >
-          <div className="flex items-center gap-3 text-[12px] uppercase tracking-widest text-cream-55">
-            <span className="block h-px w-10 bg-cream-55" />
+          <div className="text-cream-55 flex items-center gap-3 text-[12px] uppercase tracking-widest">
+            <span className="bg-cream-55 block h-px w-10" />
             Scroll to explore
           </div>
 
           <motion.a
             href="#work"
-            className="group inline-flex items-center gap-4 rounded-full border border-cream-10 px-7 py-3.5 text-sm tracking-wide text-cream"
+            className="border-cream-10 group inline-flex items-center gap-4 rounded-full border px-7 py-3.5 text-sm tracking-wide text-cream"
             whileHover={{ backgroundColor: 'rgba(244,242,238,0.08)' }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 400, damping: 25 }}
@@ -106,7 +111,8 @@ export function Hero() {
             </motion.span>
           </motion.a>
 
-          <span className="text-[12px] tracking-wider text-cream-55">Est. 2020</span>
+          <span className="text-cream-55 hidden text-[12px] tracking-wider md:block">Est. 2020
+          </span>
         </motion.div>
       </motion.div>
     </section>
