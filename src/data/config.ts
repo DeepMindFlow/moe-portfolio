@@ -8,7 +8,7 @@ export const config = {
   github: 'https://github.com/DeepMindFlow?tab=repositories',
   linkedin: 'https://www.linkedin.com/in/mwilli7/',
   // resume: 'https://your-resume-link.com',
-  avatar: '/avatar.png',
+  avatar: '/image_04.png',
   meta: {
     title: "Monne'T Williams ✦ ML Engineer",
     description:

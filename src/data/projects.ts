@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description:
       'Predicts NASDAQ stock price direction using a Kaggle dataset. Multiple models — XGBoost, RNN, LSTM, and an LSTM + Transformer hybrid — are compared against each other to evaluate performance across dataset characteristics. Decision logic applies Walk-Forward validation, Stop Loss/Take Profit rules, Backtesting, and a Confidence scoring system to determine optimal trade signals.',
     tags: ['XGBoost', 'RNN', 'LSTM', 'Transformer', 'Backtesting', 'Python'],
-    href: '#',
+    href: 'https://algo-trader-rosy.vercel.app/',
     previewGradient: 'linear-gradient(135deg, #2b5ce6 0%, #050507 50%, #1847d1 100%)',
   },
   {
