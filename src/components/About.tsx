@@ -110,6 +110,10 @@ export function About() {
               <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Transformer</span>
               <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Decision Trees</span>
               <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Python</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">K-Means</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Scikit-Learn</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Logistic Regression</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">K-Nearest Neighbors (KNN)</span>
             </div>
           </div>
         </div>
