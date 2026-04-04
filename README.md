@@ -8,15 +8,13 @@ Each tool handles exactly what it's best at.
 | Layer | Tool | Used For |
 |---|---|---|
 | Layout & styles | **Tailwind CSS** | Spacing, colors, typography, responsive design |
-| Component motion | **Framer Motion** | Navbar entrance, hero stagger, hover springs, cursor physics, form transitions |
-| Scroll & cinematic | **GSAP + ScrollTrigger** | Word-split headlines, scroll-triggered reveals, parallax ghost text, marquee ticker |
+
 
 ## Tech Stack
 
 - **Framework**: React 18 + Vite 5
 - **Language**: TypeScript (strict)
 - **Styling**: Tailwind CSS v3
-- **Animation**: Framer Motion 12 + GSAP 3 (ScrollTrigger, TextPlugin)
 - **Contact API**: Vercel serverless + Resend
 - **Linting**: ESLint 9 + Prettier
 - **Deployment**: Vercel
