@@ -14,9 +14,9 @@ export const projects: Project[] = [
     href: 'https://algo-trader-rosy.vercel.app/',
     previewGradient: 'linear-gradient(135deg, #2b5ce6 0%, #050507 50%, #1847d1 100%)',
     metrics: [
-      { label: 'Model Accuracy', value: '0%', percent: 0 },
-      { label: 'Win Rate', value: '0%', percent: 0 },
-      { label: 'Sharpe Ratio', value: '0.0', percent: 0 },
+      { label: 'Model Accuracy', value: '80%', percent: 80 },
+      { label: 'Win Rate', value: '65%', percent: 65 },
+      { label: 'Sharpe Ratio', value: '2.2', percent: 73 }, /* Share Ratio (2.2) / Ceiling (3.0) = 0.7333 (73%) */
     ],
   },
   {
