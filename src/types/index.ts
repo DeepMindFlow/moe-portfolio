@@ -1,14 +1,21 @@
+export interface ProjectMetric {
+  label: string
+  value: string
+  percent: number
+}
+
 export interface Project {
   id: string
   num: string
   year: string
   title: string
   description: string
+  terminalText: string
   tags: string[]
   href: string
   featured?: boolean
-  // CSS gradient string used as the hover preview "image"
   previewGradient: string
+  metrics?: ProjectMetric[]
 }
 
 export interface Service {

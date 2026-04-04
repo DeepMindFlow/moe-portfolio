@@ -54,20 +54,28 @@ export function About() {
 
       {/* Right */}
       <div ref={rightRef as React.RefObject<HTMLDivElement>} className="pt-0 md:pt-20">
-        <p className="text-cream-55 mb-10 text-[17px] leading-[1.8]">
-          I'm a Machine Learning Engineer with a deep focus on NLP and generative AI. I build
-          systems from first principles — understanding the math before touching a framework.
-          Currently pursuing graduate coursework in ML and Deep Learning at Georgia Tech while
-          shipping real-world projects.
-        </p>
-        <p className="text-cream-55 mb-10 text-[17px] tracking-wide">
-          University: Georgia Institute of Technology, Atlanta, GA
-        </p>
-        <p className="text-cream-55 mb-10 text-[17px] tracking-wide">
-          Education: Master of Science in Computer Science, Specialization in Machine Learning
-        </p>
 
-        <div className="grid grid-cols-3 gap-3 md:gap-6">
+        {/* (1) ASCII + JSON bio card */}
+        <div className="mb-10 rounded-xl border border-cream/8 bg-[#080810] p-5 font-mono">
+          <div className="flex gap-4 items-start">
+            <pre className="text-[6px] leading-[1.1] text-blue flex-shrink-0">{`███╗   ███╗
+████╗ ████║
+██╔████╔██║
+██║╚██╔╝██║
+██║ ╚═╝ ██║
+╚═╝     ╚═╝`}</pre>
+            <div className="flex flex-col gap-[5px]">
+              <p className="text-[10.5px]"><span className="text-cream/30">name:   </span><span className="text-blue-pale">"Monne'T Williams"</span></p>
+              <p className="text-[10.5px]"><span className="text-cream/30">role:   </span><span className="text-blue-pale">"Machine Learning Engineer"</span></p>
+              <p className="text-[10.5px]"><span className="text-cream/30">University: </span><span className="text-blue-pale">"Georgia Institute of Technology"</span></p>
+              <p className="text-[10.5px]"><span className="text-cream/30">degree: </span><span className="text-blue-pale">"MS in Computer Science (CS) · Machine Learning (ML) Specialization"</span></p>
+              <p className="text-[10.5px]"><span className="text-cream/30">status: </span><span className="text-green-400">"open_to_work": true</span></p>
+            </div>
+          </div>
+        </div>
+
+        {/* (2) Stats — 2+, 9+, 100% */}
+        <div className="mb-10 grid grid-cols-3 gap-3 md:gap-6">
           {stats.map(({ num, label }) => (
             <div key={label} className="stat border-cream-10 border-t pt-5">
               <span className="block font-display text-[38px] font-normal leading-none tracking-tight">
@@ -77,6 +85,35 @@ export function About() {
             </div>
           ))}
         </div>
+
+        {/* (3) Availability + Core Stack bento cards */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="rounded-xl border border-cream/8 bg-[#080810] p-4 transition-colors duration-300 hover:border-blue/40 hover:bg-blue/[0.04]">
+            <p className="mb-2 text-[10px] uppercase tracking-wider text-cream/40">Availability</p>
+            <div className="mb-2 flex items-center gap-2">
+              <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-green-400" />
+              <span className="text-[12px] font-medium text-cream">Open to work</span>
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Machine Learning Engineer</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Quant</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">NLP / GenAI</span>
+            </div>
+          </div>
+          <div className="rounded-xl border border-cream/8 bg-[#080810] p-4 transition-colors duration-300 hover:border-blue/40 hover:bg-blue/[0.04]">
+            <p className="mb-2 text-[10px] uppercase tracking-wider text-cream/40">Core Stack</p>
+            <div className="flex flex-wrap gap-1.5">
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">PyTorch</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">XGBoost</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">NLP</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">LSTM</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Transformer</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Decision Trees</span>
+              <span className="rounded-full border border-blue/20 bg-blue/10 px-2 py-0.5 text-[9px] text-blue-pale">Python</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   )

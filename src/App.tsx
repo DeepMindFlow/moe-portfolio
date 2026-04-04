@@ -1,14 +1,16 @@
+import { Routes, Route } from 'react-router-dom'
 import { useEffect } from 'react'
-import { About } from '@/components/About'
-import { Contact } from '@/components/Contact'
 import { Cursor } from '@/components/Cursor'
+import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
+import { PageTransition } from '@/components/ui/PageTransition'
 import { Hero } from '@/components/Hero'
 import { Marquee } from '@/components/Marquee'
-import { Navbar } from '@/components/Navbar'
+import { About } from '@/components/About'
 import { Services } from '@/components/Services'
+import { Contact } from '@/components/Contact'
 import { Work } from '@/components/Work'
-import { PageTransition } from '@/components/ui/PageTransition'
+import { ProjectsPage } from '@/pages/ProjectsPage'
 import { ScrollTrigger } from '@/lib/gsap'
 
 export default function App() {
@@ -19,19 +21,25 @@ export default function App() {
 
   return (
     <>
-      {/* Blue/black panel wipe on first load */}
       <PageTransition />
-
       <Cursor />
       <Navbar />
-      <main>
-        <Hero />
-        <Marquee />
-        <About />
-        <Services />
-        <Work />
-        <Contact />
-      </main>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main>
+              <Hero />
+              <Marquee />
+              <About />
+              <Services />
+              <Work />
+              <Contact />
+            </main>
+          }
+        />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Routes>
       <Footer />
     </>
   )

@@ -7,6 +7,7 @@ import { useGsapReveal } from '@/hooks/useGsapReveal'
 import { useSplitText } from '@/hooks/useSplitText'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 import { projects } from '@/data/projects'
+import { Link } from 'react-router-dom'
 import type { Project } from '@/types'
 
 interface CardProps {
@@ -154,14 +155,12 @@ export function Work() {
             </h2>
           </div>
           <div ref={headerRightRef as React.RefObject<HTMLDivElement>}>
-            <motion.a
-              href="#"
-              className="rounded-full border border-cream/10 px-5 py-2.5 text-[13px] tracking-wide text-cream/50"
-              whileHover={{ backgroundColor: 'rgba(244,242,238,0.08)', color: '#f4f2ee' }}
-              transition={{ duration: 0.2 }}
+            <Link
+              to="/projects"
+              className="hover:bg-cream-8 rounded-full border border-cream/10 px-5 py-2.5 text-[13px] tracking-wide text-cream/50 transition-colors duration-200 hover:text-cream"
             >
               All projects →
-            </motion.a>
+            </Link>
           </div>
         </div>
 
@@ -175,7 +174,7 @@ export function Work() {
       {/* Horizontal scroll track */}
       <div className="overflow-x-auto pl-6 md:overflow-visible md:pl-12">
         <div ref={trackRef} className="flex gap-0.5 will-change-transform">
-          {projects.map((project, i) => (
+          {projects.slice(0, 2).map((project, i) => (
             <div key={project.id} className="project-card-wrap">
               <ProjectCard project={project} onHover={setHoveredProject} index={i} />
             </div>
