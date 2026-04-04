@@ -1,4 +1,4 @@
-# Portfolio v4 — React + Vite + Tailwind + Framer Motion + GSAP
+# Portfolio v4 — React + Vite + Tailwind
 
 Vanholtz.co-inspired personal portfolio with a layered animation stack.
 Each tool handles exactly what it's best at.
